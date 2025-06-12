@@ -96,5 +96,5 @@ void loop() {
         }
     }
 
-    //Reset button; shortpress to reset, long press to wipe EEPROM
+ //Reset button ; shortpress to reset, long press to wipe EEPROM
 }
