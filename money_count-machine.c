@@ -24,4 +24,6 @@ int* denominations;
 int denomCount = 0;
 
 
-int currencyIndex
+int currencyIndex = 0;
+int denomIndex = 3; // defalt index
+int selectedDenom = 10000;
