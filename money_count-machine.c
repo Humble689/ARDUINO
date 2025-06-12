@@ -55,4 +55,9 @@ void setup() {
 
 
     loadFromEEPROM(); // load saved  data
+
+
+    if (!countingStarted) {
+        showCurrencyMenu();
+    }
 }
