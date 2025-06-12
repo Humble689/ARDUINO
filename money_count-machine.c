@@ -61,3 +61,28 @@ void setup() {
         showCurrencyMenu();
     }
 }
+
+
+void loop() {
+    if (!countingStarted) {
+        handleCurrencyAndDenominationSelection();
+        return;
+    }
+
+    if (checkingNote) {
+        checkingNote = false;
+        if (checkingNote()) {
+            lcd.setCursor(0,1);
+            lcd.print("Fake note!    ");
+            buzzFakeNote();
+            delay(1000);
+
+        } else {
+            billCount++;
+            saveToEEPROM();
+
+
+            lcd.setCursor(0,1);
+        }
+    }
+}
