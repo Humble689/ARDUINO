@@ -25,5 +25,34 @@ int denomCount = 0;
 
 
 int currencyIndex = 0;
-int denomIndex = 3; // defalt index
+int denomIndex = 3; // default index
 int selectedDenom = 10000;
+
+
+volatile int billCount = 0;
+volatile bool checkingNote = false;
+bool countingStarted = false;
+
+
+
+void setup() {
+    pinMode(motorPin, OUTPUT):
+    pinMode(irSensorPin, INPUT_PULLUP);
+    pinMode(uvLedPin, OUTPUT);
+    pinMode(buzzerPin, OUTPUT)
+
+    pinMode(btnNext, INPUT_PULLUP);
+    pinMode(btnSelect, INPUT_PULLUP);
+    pinMode(btnReset, INPUT_PULLUP);
+
+
+
+    attachInterrupt(digitalPinToInterrupt(irSensorPin), billDetected, FALLING);
+
+
+    lcd.begin();
+    lcd.backlight();
+
+
+    loadFromEEPROM(); // load saved  data
+}
