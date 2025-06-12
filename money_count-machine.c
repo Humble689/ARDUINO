@@ -86,6 +86,15 @@ void loop() {
             lcd.print("count:");
             lcd.print(billCount);
             lcd.print(" ");
+            lcd.print(currencies[currencyIndex]);
+
+
+        lcd.setCursor(0,0);
+        lcd.print("Total:");
+        lcd.print(billCount * selectedDenom);
+        lcd.print("    ");
         }
     }
+
+    //Reset button; shortpress to reset, long press to wipe EEPROM
 }
