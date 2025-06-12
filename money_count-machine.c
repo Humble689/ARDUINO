@@ -83,6 +83,9 @@ void loop() {
 
 
             lcd.setCursor(0,1);
+            lcd.print("count:");
+            lcd.print(billCount);
+            lcd.print(" ");
         }
     }
 }
